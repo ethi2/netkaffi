@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="OurCSS.css">
 </head>
 <body>
+
 <form action="#" th:action="@{/addproduct}" th:object="${product}" method="post">
   <p><label for="name">Name</label>
   <input type="text" th:field="*{name}" id="name" placeholder="Name">
@@ -24,5 +25,6 @@
   <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></span></p>
   <input type="submit" value="Add Product">
 </form>
+
 </body>
 </html>
